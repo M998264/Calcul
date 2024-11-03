@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsla(0, 0%, 95%, 1);
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  border-radius: 0; /* إزالة الزوايا المستديرة لتناسب الشاشة الكاملة */
+  width: 100vw; /* عرض كامل الشاشة */
+  height: 100vh; /* ارتفاع كامل الشاشة */
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 3rem;
+  text-align: left;
+  border: none;
+  background-color: hsla(0, 0%, 20%, 1);
+  color: white;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  height: calc(100vh - 80px); /* تخصيص المساحة المتبقية للأزرار */
+}
+
+button {
+  width: 100%; /* عرض الزر يتكيف مع عرض العمود */
+  height: 100%; /* ارتفاع الزر يتكيف مع ارتفاع الصف */
+  border-radius: 10px;
+  border: none;
+  background-color: #494949;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.oi {
+  background-color: #F9B800;
+}
+
+.o {
+  color: red;
+  background-color: #F9B800;
+}
+
+.i {
+  color: #FFF440;
+  background-color: #0004BB;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 480px) {
+  #display {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+}
