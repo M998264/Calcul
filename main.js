@@ -20,3 +20,12 @@ function calculate() {
 function del(){
   display.value=display.value.slice(0,-1)
 }
+function calculateSquareRoot() {
+  display.value = Math.sqrt(parseFloat(display.value));
+}
+function calculateSquare() {
+  display.value = Math.pow(parseFloat(display.value), 2);
+}
+function calculateCube() {
+  display.value = Math.pow(parseFloat(display.value), 3);
+}
