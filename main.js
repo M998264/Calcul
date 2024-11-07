@@ -20,6 +20,7 @@ function calculate() {
 function del(){
   display.value=display.value.slice(0,-1)
 }
+
 function calculateSquareRoot() {
   display.value = Math.sqrt(parseFloat(display.value));
 }
