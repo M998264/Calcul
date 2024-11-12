@@ -50,3 +50,15 @@ function calculateTan() {
 function calculateExponential() {
   display.value = Math.exp(parseFloat(display.value));
 }
+
+function calculateAsin() {
+  display.value = Math.asin(parseFloat(display.value)) * 180 / Math.PI;
+}
+
+function calculateAcos() {
+  display.value = Math.acos(parseFloat(display.value)) * 180 / Math.PI;
+}
+
+function calculateAtan() {
+  display.value = Math.atan(parseFloat(display.value)) * 180 / Math.PI;
+}
