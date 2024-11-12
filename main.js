@@ -30,3 +30,23 @@ function calculateSquare() {
 function calculateCube() {
   display.value = Math.pow(parseFloat(display.value), 3);
 }
+
+function calculateLog() {
+  display.value = Math.log10(parseFloat(display.value));
+}
+
+function calculateSin() {
+  display.value = Math.sin(parseFloat(display.value) * Math.PI / 180);
+}
+
+function calculateCos() {
+  display.value = Math.cos(parseFloat(display.value) * Math.PI / 180);
+}
+
+function calculateTan() {
+  display.value = Math.tan(parseFloat(display.value) * Math.PI / 180);
+}
+
+function calculateExponential() {
+  display.value = Math.exp(parseFloat(display.value));
+}
