@@ -62,3 +62,54 @@ function calculateAcos() {
 function calculateAtan() {
   display.value = Math.atan(parseFloat(display.value)) * 180 / Math.PI;
 }
+
+let memory = 0;
+
+function memorySave() {
+  memory = parseFloat(display.value);
+}
+
+function memoryRecall() {
+  display.value = memory;
+}
+
+function memoryClear() {
+  memory = 0;
+}
+
+function calculateLn() {
+  display.value = Math.log(parseFloat(display.value));
+}
+
+function calculateFactorial() {
+  let number = parseInt(display.value);
+  if (number < 0) {
+    display.value = "Error";
+  } else {
+    let result = 1;
+    for (let i = 1; i <= number; i++) {
+      result *= i;
+    }
+    display.value = result;
+  }
+}
+
+function calculateAbs() {
+  display.value = Math.abs(parseFloat(display.value));
+}
+
+function appendE() {
+  display.value += Math.E;
+}
+
+let inDegrees = true;
+
+function toggleDegrees() {
+  inDegrees = !inDegrees;
+  document.getElementById("degreeToggle").textContent = inDegrees ? "Deg" : "Rad";
+}
+
+function showDateTime() {
+  const now = new Date();
+  display.value = now.toLocaleString();
+}
