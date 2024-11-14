@@ -10,7 +10,6 @@ body {
 #calculator {
   font-family: Arial, sans-serif;
   background-color: #000000;
-  border-radius: 0; /* إزالة الزوايا المستديرة لتناسب الشاشة الكاملة */
   width: 100vw; /* عرض كامل الشاشة */
   height: 100vh; /* ارتفاع كامل الشاشة */
   overflow: hidden;
@@ -20,7 +19,7 @@ body {
   width: 100%;
   padding: 20px;
   font-size: 3rem;
-  text-align: left;
+  text-align: right; /* عرض الأرقام على اليمين */
   border: none;
   background-color: hsla(0, 0%, 20%, 1);
   color: white;
@@ -28,15 +27,15 @@ body {
 
 #keys {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr); /* الشبكة تحتوي على 10 أعمدة للأزرار */
   gap: 10px;
   padding: 20px;
-  height: calc(100vh - 80px); /* تخصيص المساحة المتبقية للأزرار */
+  height: calc(100vh - 100px); /* تخصيص المساحة المتبقية للأزرار */
 }
 
 button {
-  width: 100%; /* عرض الزر يتكيف مع عرض العمود */
-  height: 100%; /* ارتفاع الزر يتكيف مع ارتفاع الصف */
+  width: 100%; 
+  height: 100%; 
   border-radius: 10px;
   border: none;
   background-color: #494949;
@@ -44,6 +43,9 @@ button {
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .oi {
@@ -63,10 +65,10 @@ button {
 /* Responsive styles for smaller screens */
 @media (max-width: 480px) {
   #display {
-    font-size: 2.5rem;
+    font-size: 2rem; /* تقليل حجم الخط للشاشات الصغيرة */
   }
 
   button {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* تصغير حجم الخط للأزرار */
   }
 }
