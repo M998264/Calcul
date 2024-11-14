@@ -19,7 +19,7 @@ body {
   width: 100%;
   padding: 20px;
   font-size: 3rem;
-  text-align: right; /* عرض الأرقام على اليمين */
+  text-align: left; /* عرض الأرقام على اليمين */
   border: none;
   background-color: hsla(0, 0%, 20%, 1);
   color: white;
