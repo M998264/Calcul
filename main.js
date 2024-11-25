@@ -35,18 +35,25 @@ function calculateLog() {
   display.value = Math.log10(parseFloat(display.value));
 }
 
-function calculateSin() {
-  display.value = Math.sin(parseFloat(display.value) * Math.PI / 180);
+
+
+function sin() {
+  let value = parseFloat(display.value);
+  if (inDegrees) value = (value * Math.PI) / 180;
+  display.value = Math.sin(value);
 }
 
-function calculateCos() {
-  display.value = Math.cos(parseFloat(display.value) * Math.PI / 180);
+function tan() {
+  let value = parseFloat(display.value);
+  if (inDegrees) value = (value * Math.PI) / 180; // تحويل القيمة إلى الراديان إذا كانت بالدرجات
+  display.value = Math.tan(value);
 }
 
-function calculateTan() {
-  display.value = Math.tan(parseFloat(display.value) * Math.PI / 180);
+function cos() {
+  let value = parseFloat(display.value);
+  if (inDegrees) value = (value * Math.PI) / 180; // تحويل القيمة إلى الراديان إذا كانت بالدرجات
+  display.value = Math.cos(value);
 }
-
 function calculateExponential() {
   display.value = Math.exp(parseFloat(display.value));
 }
@@ -109,7 +116,4 @@ function toggleDegrees() {
   document.getElementById("degreeToggle").textContent = inDegrees ? "Deg" : "Rad";
 }
 
-function showDateTime() {
-  const now = new Date();
-  display.value = now.toLocaleString();
-}
+
