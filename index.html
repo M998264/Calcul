@@ -2,59 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>calculatrice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div id="calculator">
-    <input id="display" readonly>
-    <div id="keys">
-      
-      <button onclick="calculateSquareRoot()">√</button>
-      <button onclick="calculateLog()">log</button>
-      <button onclick="sin()">sin</button>
-      <button onclick="memoryRecall()">MR</button>
-      <button id="degreeToggle" onclick="toggleDegrees()">Deg</button>
-      <button onclick="apprendToDislay('9')">9</button>
-      <button onclick="apprendToDislay('8')">8</button>
-      <button onclick="apprendToDislay('7')">7</button>
-      <button onclick="apprendToDislay('/')" class="oi">/</button>
-      <button onclick="clearDisplay()" class="o">C</button>
-      <button onclick="apprendToDislay(Math.PI.toFixed(5))">π</button>
-      <button onclick="cos()">cos</button>
-      <button onclick="tan()">tan</button>
-      <button onclick="memorySave()">MS</button>
-      <button onclick="calculateAbs()">|x|</button>
-      <button onclick="apprendToDislay('6')">6</button>
-      <button onclick="apprendToDislay('5')">5</button>
-      <button onclick="apprendToDislay('4')">4</button>
-      <button onclick="apprendToDislay('*')" class="oi">*</button>
-      <button onclick="apprendToDislay(')')" class="oi">)</button>
-      <button onclick="calculateCube()">x³</button>
-      <button onclick="calculateAsin()">sin⁻¹</button>
-      <button onclick="calculateAcos()">cos⁻¹</button>
-      <button onclick="memoryClear()">MC</button>
-      <button onclick="calculateLn()">ln</button>
-      <button onclick="apprendToDislay('3')">3</button>
-      <button onclick="apprendToDislay('2')">2</button>
-      <button onclick="apprendToDislay('1')">1</button>
-      <button onclick="apprendToDislay('-')" class="oi">-</button>
-      <button onclick="apprendToDislay('(')" class="oi">(</button>
-      <button onclick="calculateSquare()">x²</button>
-      <button onclick="calculateAtan()">tan⁻¹</button>
-      <button onclick="calculateExponential()">eˣ</button>
-      <button onclick="calculateFactorial()">n!</button>
-      <button onclick="appendE()">e</button>
-      <button onclick="apprendToDislay('0')">0</button>
-      <button onclick="apprendToDislay('.')">.</button>
-      <button onclick="del()">DEL</button>
-      <button onclick="apprendToDislay('+')" class="oi">+</button>
-      <button onclick="calculate()" class="i">=</button>
+  <div class="calculator">
+    <div class="calculation">
+      <div class="display">
+        <input type="text" id="input" placeholder="0" disabled />
       </div>
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button data-number="(" class="side-button button">(</button>
+        <button data-number=")" class="side-button button">)</button>
+        <button data-number="AC" id="clear" class="operation-button button">AC</button>
+        <button data-number="DEL" id="erase" class="operation-button button">DEL</button>
+        <button data-number="/" class="operation-button button">/</button>
+        <button data-number="*" class="operation-button button">*</button>
+
+        <!-- Row 2 -->
+        <button data-number="^2" class="side-button button">^2</button>
+        <button data-number="^3" class="side-button button">^3</button>
+        <button data-number="7" class="digit-button button">7</button>
+        <button data-number="8" class="digit-button button">8</button>
+        <button data-number="9" class="digit-button button">9</button>
+        <button data-number="-" class="operation-button button">-</button>
+
+        <!-- Row 3 -->
+        <button data-number="√(" class="side-button button">√</button>
+        <button data-number="∛(" class="side-button button">∛</button>
+        <button data-number="6" class="digit-button button">6</button>
+        <button data-number="5" class="digit-button button">5</button>
+        <button data-number="4" class="digit-button button">4</button>
+        <button data-number="+" class="operation-button button">+</button>
+
+        <!-- Row 4 -->
+        <button data-number="!" class="side-button button">!</button>
+        <button data-number="sin(" class="side-button button">sin(</button>
+        <button data-number="1" class="digit-button button">1</button>
+        <button data-number="2" class="digit-button button">2</button>
+        <button data-number="3" class="digit-button button">3</button>
+        <button data-number="=" id="equal" class="operation-button">=</button>
+
+        <!-- Row 5 -->
+        <button data-number="cos(" class="side-button button">cos(</button>
+        <button data-number="tan(" class="side-button button">tan(</button>
+        <button data-number="0" id="zero" class="digit-button button">0</button>
+        <button data-number="." class="digit-button button">.</button>
+      </div>
+    </div>
+    <div class="history">
+      <h2 id="historyTitle">History</h2>
+      <div id="historyContent"></div>
+    </div>
   </div>
- 
-  <script src="main.js"></script>
+  
+  <script src="script.js"></script>
 </body>
 </html>
